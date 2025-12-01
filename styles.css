@@ -408,3 +408,48 @@ nav a:hover {
   }
 }
 
+.project-image {
+  position: relative;
+  overflow: hidden;    /* evita que el overlay salga del borde */
+  border-radius: 0.75rem;
+}
+
+.project-image a {
+  display: block;      /* hace que solo mida lo que mide la imagen */
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Capa oscura exacta al tamaño de la imagen */
+.project-image .overlay {
+  position: absolute;
+  inset: 0;            /* ocupa EXACTO el tamaño de la imagen */
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.25s ease;
+  border-radius: inherit;
+  pointer-events: none; /* para que el click siga funcionando */
+}
+
+/* Hover: mostrar overlay */
+.project-image:hover .overlay {
+  opacity: 1;
+}
+
+/* Hover: opacar imagen */
+.project-image:hover img {
+  opacity: 0.6;
+  transform: scale(1.01);
+}
