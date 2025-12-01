@@ -78,8 +78,45 @@ nav a:hover {
 
 .hero-content {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+/* Texto toma un poco más de espacio que la foto */
+.hero-text-block {
+  flex: 1.4;
+}
+
+.hero-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo img {
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;          /* foto redonda */
+  object-fit: cover;
+  border: 2px solid rgba(220, 228, 238, 0.8);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+}
+
+/* En pantallas pequeñas que todo se ponga en columna */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: left;
+  }
+  .hero-photo {
+    order: -1;
+  }
+
+  .hero-photo img {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .hero-badge {
