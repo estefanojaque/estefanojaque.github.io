@@ -348,11 +348,9 @@ nav a:hover {
   }
 }
 /* PROYECTOS – LAYOUT CON IMAGEN A LA DERECHA */
-
 .projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: flex;   /* ahora la usamos como pista del carrusel */
+  gap: 0;          /* sin espacio horizontal para que no se vea el siguiente slide */
 }
 
 .project-row {
@@ -373,42 +371,6 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.project-image a {
-  display: block;
-  width: 100%;
-}
-
-.project-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.75rem;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  object-fit: cover;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
-}
-
-.project-image img:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.95);
-  border-color: rgba(96, 165, 250, 0.8);
-}
-
-/* RESPONSIVE – STACK EN MÓVIL */
-
-@media (max-width: 768px) {
-  .project-row {
-    flex-direction: column;
-  }
-
-  .project-image {
-    order: -1; /* Imagen arriba, texto abajo en móvil (si no te gusta, bórralo) */
-  }
-}
-
-.project-image {
   position: relative;
   overflow: hidden;    /* evita que el overlay salga del borde */
   border-radius: 0.75rem;
@@ -417,19 +379,23 @@ nav a:hover {
 .project-image a {
   display: block;      /* hace que solo mida lo que mide la imagen */
   position: relative;
+  width: 100%;
 }
 
 .project-image img {
   width: 100%;
   height: auto;
   border-radius: inherit;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  object-fit: cover;
+  transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
 }
 
 /* Capa oscura exacta al tamaño de la imagen */
 .project-image .overlay {
   position: absolute;
-  inset: 0;            /* ocupa EXACTO el tamaño de la imagen */
+  inset: 0;
   background: rgba(0, 0, 0, 0.45);
   opacity: 0;
   display: flex;
@@ -440,16 +406,124 @@ nav a:hover {
   font-size: 1rem;
   transition: opacity 0.25s ease;
   border-radius: inherit;
-  pointer-events: none; /* para que el click siga funcionando */
+  pointer-events: none;
 }
 
-/* Hover: mostrar overlay */
+/* Hover: mostrar overlay y opacar imagen */
 .project-image:hover .overlay {
   opacity: 1;
 }
 
-/* Hover: opacar imagen */
 .project-image:hover img {
   opacity: 0.6;
   transform: scale(1.01);
+}
+
+/* RESPONSIVE – STACK EN MÓVIL */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-image {
+    order: -1; /* Imagen arriba, texto abajo en móvil */
+  }
+}
+
+.section-subtitle {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #9ca3af;
+  max-width: 640px;
+}
+
+/* Carrusel (para proyectos y experiencia) */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+/* cada slide ocupa todo el ancho */
+.carousel-item {
+  width: 100%;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+/* En móvil, los project-row siguen apilados */
+@media (max-width: 768px) {
+  .carousel-item.project-row {
+    flex-direction: column;
+  }
+}
+
+/* BOTONES (FLECHAS) */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(5, 8, 22, 0.95);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #e5e7eb;
+  z-index: 5;
+}
+
+/* Hover: mismo estilo que tu botón primary */
+.carousel-btn:hover {
+  background: linear-gradient(90deg, #0ea5e9, #2563eb);
+  color: #0b1120;
+  border-color: transparent;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
+}
+
+/* Flechas DENTRO del card, sin cortarse */
+.carousel-btn.prev {
+  left: 0.75rem;    /* antes: -1rem */
+}
+
+.carousel-btn.next {
+  right: 0.75rem;   /* antes: -1rem */
+}
+
+/* En móvil, un poco más pegadas al borde */
+@media (max-width: 768px) {
+  .carousel-btn.prev {
+    left: 0.4rem;   /* antes: -0.3rem */
+  }
+
+  .carousel-btn.next {
+    right: 0.4rem;  /* antes: -0.3rem */
+  }
+}
+
+/* DOTS */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: #374151;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  width: 22px;
+  background: linear-gradient(90deg, #0ea5e9, #2563eb);
 }

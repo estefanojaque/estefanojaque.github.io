@@ -18,6 +18,7 @@
         <a href="#about">Sobre mí</a>
         <a href="#skills">Habilidades</a>
         <a href="#projects">Proyectos</a>
+        <a href="#experience">Experiencia</a>
         <a href="#certs">Certificaciones</a>
         <a href="#contact">Contacto</a>
       </nav>
@@ -139,107 +140,242 @@
       </div>
     </section>
 
-        <!-- PROYECTOS -->
+    <!-- PROYECTOS -->
     <section id="projects" class="section">
       <div class="container">
         <h3>Proyectos destacados</h3>
 
-        <div class="projects-list">
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Proyecto anterior">&#10094;</button>
 
-           <!-- PROYECTO 1: AVENTURAPE -->
-          <article class="card project-row">
-            <div class="project-info">
-              <h4>Plataforma web y app móvil de planificación de viajes – Aventurape</h4>
-              <p class="project-role">Rol: Líder de equipo · Backend & QA · Full Stack</p>
-              <p>
-                Plataforma web y aplicación móvil que conecta a usuarios con microaventuras locales personalizadas 
-                y espontáneas (ocio, deportes, gastronomía) en Perú con sistema de geolocalización, filtros ,
-                integrando un chatbot con IA para recomendaciones de actividades y resolución de dudas en tiempo real.
-              </p>
-              <ul class="project-list">
-                <li>Diseño e implementación del backend y APIs REST para gestión de destinos, rutas, reservas y preferencias de usuario.</li>
-                <li>Desarrollo de un chatbot con IA (modo claro y modo oscuro) integrado en la plataforma para asistir al viajero.</li>
-                <li>Implementación de una suite de pruebas automatizadas con JUnit, Mockito y Cucumber para asegurar la calidad de los flujos críticos.</li>
-              </ul>
-              <p class="project-tech">
-                <strong>Tecnologías:</strong> Java, Spring Boot, Angular, APIs REST, integración de IA (Gemini/Dialogflow), JUnit, Mockito, Cucumber, Firebase / Google Cloud.
-              </p>
-              <a class="btn small" href="https://github.com/estefanojaque/AventuraPE.git" target="_blank" rel="noopener noreferrer">
-                Ver repositorio en GitHub
-              </a>
-            </div>
+          <div class="carousel-track projects-list">
+            
+            <!-- PROYECTO : AVENTURAPE -->
+            <article class="card project-row carousel-item">
+              <div class="project-info">
+                <h4>Plataforma web y app móvil de planificación de viajes – Aventurape</h4>
+                <p class="project-role">Rol: Líder de equipo · Backend & QA · Full Stack</p>
+                <p>
+                  Plataforma web y aplicación móvil que conecta a usuarios con microaventuras locales personalizadas 
+                  y espontáneas (ocio, deportes, gastronomía) en Perú con sistema de geolocalización y filtros,
+                  integrando un chatbot con IA para recomendaciones de actividades y resolución de dudas en tiempo real.
+                </p>
+                <ul class="project-list">
+                  <li>Diseño e implementación del backend y APIs REST para gestión de destinos, rutas, reservas y preferencias de usuario.</li>
+                  <li>Desarrollo de un chatbot con IA (modo claro y modo oscuro) integrado en la plataforma para asistir al viajero.</li>
+                  <li>Implementación de una suite de pruebas automatizadas con JUnit, Mockito y Cucumber para asegurar la calidad de los flujos críticos.</li>
+                </ul>
+                <p class="project-tech">
+                  <strong>Tecnologías:</strong> Java, Spring Boot, Angular, APIs REST, integración de IA (Gemini/Dialogflow), JUnit, Mockito, Cucumber, Firebase / Google Cloud.
+                </p>
+                <a class="btn small" href="https://github.com/estefanojaque/AventuraPE.git" target="_blank" rel="noopener noreferrer">
+                  Ver repositorio en GitHub
+                </a>
+              </div>
 
-            <div class="project-image">
-              <!-- Cambia src y href por tu imagen y tu landing de Aventurape -->
-              <a href="https://aventurape-androidsoftware.github.io/AventuraPe_LandingPage/" target="_blank" rel="noopener noreferrer">
-                <img src="img/aventurape.png" alt="Vista previa de Aventurape">
-                <div class="overlay">Visitar página</div>
-              </a>
-            </div>
-          </article>
+              <div class="project-image">
+                <a href="https://aventurape-androidsoftware.github.io/AventuraPe_LandingPage/" target="_blank" rel="noopener noreferrer">
+                  <img src="img/aventurape.png" alt="Vista previa de Aventurape">
+                  <div class="overlay">Visitar página</div>
+                </a>
+              </div>
+            </article>
+            
+            <!-- PROYECTO : MANAGEWISE -->
+            <article class="card project-row carousel-item">
+              <div class="project-info">
+                <h4>Plataforma de Gestión Ágil para Startups – ManageWise</h4>
+                <p class="project-role">Rol: Líder de equipo · Full Stack</p>
+                <p>
+                  Plataforma web para startups que facilita la gestión de proyectos y equipos con módulos como
+                  Backlog, Issues y Meetings bajo metodología ágil Scrum.
+                </p>
+                <ul class="project-list">
+                  <li>Diseño e implementación del módulo de Issues con CRUD completo y listas de eventos.</li>
+                  <li>Configuración de sign-in/sign-up con IAM y gestión de roles.</li>
+                  <li>Despliegue del frontend y backend en Azure y Vercel.</li>
+                </ul>
+                <p class="project-tech">
+                  <strong>Tecnologías:</strong> Angular, Java, Spring Boot, PostgreSQL, MySQL, Swagger.
+                </p>
+                <a class="btn small" href="https://github.com/Horizon-ManageWise" target="_blank" rel="noopener noreferrer">
+                  Ver organización en GitHub
+                </a>
+              </div>
 
-          <!-- PROYECTO 1 -->
-          <article class="card project-row">
-            <div class="project-info">
-              <h4>Plataforma de Gestión Ágil para Startups – ManageWise</h4>
-              <p class="project-role">Rol: Líder de equipo · Full Stack</p>
-              <p>
-                Plataforma web para startups que facilita la gestión de proyectos y equipos con módulos como
-                Backlog, Issues y Meetings bajo metodología ágil Scrum.
-              </p>
-              <ul class="project-list">
-                <li>Diseño e implementación del módulo de Issues con CRUD completo y listas de eventos.</li>
-                <li>Configuración de sign-in/sign-up con IAM y gestión de roles.</li>
-                <li>Despliegue del frontend y backend en Azure y Vercel.</li>
-              </ul>
-              <p class="project-tech">
-                <strong>Tecnologías:</strong> Angular, Java, Spring Boot, PostgreSQL, MySQL, Swagger.
-              </p>
-              <a class="btn small" href="https://github.com/Horizon-ManageWise" target="_blank" rel="noopener noreferrer">
-                Ver organización en GitHub
-              </a>
-            </div>
+              <div class="project-image">
+                <a href="https://horizon-managewise.github.io/LandingPage/" target="_blank" rel="noopener noreferrer">
+                  <img src="img/managewise.png" alt="Vista previa de ManageWise">
+                  <div class="overlay">Visitar página</div>
+                </a>
+              </div>
+            </article>
 
-            <div class="project-image">
-              <!-- Cambia src y href por tu imagen y tu landing -->
-              <a href="https://horizon-managewise.github.io/LandingPage/" target="_blank" rel="noopener noreferrer">
-                <img src="img\managewise.png" alt="Vista previa de ManageWise">
-                <div class="overlay">Visitar página</div>
-              </a>
-            </div>
-          </article>
+            <!-- PROYECTO : SABORES CERCANOS -->
+            <article class="card project-row carousel-item">
+              <div class="project-info">
+                <h4>Aplicación web de venta y compra de almuerzos – Sabores Cercanos</h4>
+                <p class="project-role">Rol: Líder de equipo · Full Stack</p>
+                <p>
+                  Plataforma que conecta cocineros independientes con usuarios mediante pedidos anticipados,
+                  publicaciones y sistema de favoritos, diseñada con enfoque en escalabilidad y buen diseño de dominio.
+                </p>
+                <ul class="project-list">
+                  <li>
+                    Desarrollo del frontend en Vue.js con JavaScript, configurando el entorno con Node.js, npm y Vue CLI,
+                    usando Vuex para la gestión centralizada del estado, vue-i18n para internacionalización y Axios para
+                    el consumo de la API.
+                  </li>
+                  <li>
+                    Implementación del backend en C# con .NET 8 Web API, aplicando Domain-Driven Design (DDD) y
+                    separando el proyecto en capas Application, Domain, Infrastructure e Interface, con persistencia en
+                    MySQL mediante Entity Framework Core.
+                  </li>
+                  <li>
+                    Documentación de la API con Swagger (Swashbuckle), uso de inyección de dependencias con
+                    Microsoft.Extensions.DependencyInjection y flujo de trabajo estructurado con GitFlow en GitHub.
+                  </li>
+                </ul>
+                <p class="project-tech">
+                  <strong>Tecnologías:</strong>
+                  Vue.js, JavaScript, C#, .NET 8 Web API, Entity Framework Core, MySQL, Axios, Vuex, vue-i18n,
+                  Swagger, Git, GitFlow.
+                </p>
+                <a class="btn small"
+                  href="https://github.com/Rampart-SaboresCercanos/Reporte.git"
+                  target="_blank" rel="noopener noreferrer">
+                  Ver organización en GitHub
+                </a>
+              </div>
 
-          <!-- PROYECTO 2 -->
-          <article class="card project-row">
-            <div class="project-info">
-              <h4>Aplicación web de venta y compra de almuerzos – Sabores Cercanos</h4>
-              <p class="project-role">Rol: Líder de equipo · Full Stack</p>
-              <p>
-                Plataforma que conecta cocineros independientes con usuarios mediante pedidos anticipados,
-                publicaciones y sistema de favoritos.
-              </p>
-              <ul class="project-list">
-                <li>Desarrollo de módulos de Recetas y Publicaciones con filtros avanzados y CRUD.</li>
-                <li>Implementación de autenticación segura IAM en backend y frontend.</li>
-                <li>Despliegue del frontend y backend en Azure y Firebase.</li>
-              </ul>
-              <p class="project-tech">
-                <strong>Tecnologías:</strong> Vue.js, ASP.NET Core, PostgreSQL, Firebase, Swagger.
-              </p>
-              <a class="btn small" href="https://github.com/Rampart-SaboresCercanos/Reporte.git" target="_blank" rel="noopener noreferrer">
-                Ver organización en GitHub
-              </a>
-            </div>
+              <div class="project-image">
+                <a href="https://rampart-saborescercanos.github.io/LandingPage/" target="_blank" rel="noopener noreferrer">
+                  <img src="img/saborescercanos.png" alt="Vista previa de Sabores Cercanos">
+                  <div class="overlay">Visitar página</div>
+                </a>
+              </div>
+            </article>
+              
+            <!-- PROYECTO : AVENTIS -->
+            <article class="card project-row carousel-item">
+              <div class="project-info">
+                <h4>Aplicación móvil y ecosistema web para gestión de becas – Aventis</h4>
+                <p class="project-role">Rol: Líder técnico y de equipo</p>
+                <p>
+                  Plataforma integral que conecta a familias con oportunidades de becas ofrecidas por empresas y ONGs,
+                  centralizando la postulación, carga de documentos y métricas de los programas.
+                </p>
+                <ul class="project-list">
+                  <li>Planificación de sprints y gestión del backlog utilizando metodologías ágiles.</li>
+                  <li>Desarrollo del bounded context de IAM en Flutter (frontend) y Java/Spring Boot (backend).</li>
+                  <li>Coordinación de la integración con Firebase y validación de UX mediante entrevistas con usuarios.</li>
+                </ul>
+                <p class="project-tech">
+                  <strong>Tecnologías:</strong> Flutter, Kotlin, Java, Spring Boot, Firebase, Redis, CI/CD con GitHub Actions.
+                </p>
+                <a class="btn small" href="https://github.com/Aventis-Scholr" target="_blank" rel="noopener noreferrer">
+                  Ver organización en GitHub
+                </a>
+              </div>
 
-            <div class="project-image">
-              <!-- Cambia src y href por tu imagen y tu landing -->
-              <a href="https://rampart-saborescercanos.github.io/LandingPage/" target="_blank" rel="noopener noreferrer">
-                <img src="img/saborescercanos.png" alt="Vista previa de Sabores Cercanos">
-                <div class="overlay">Visitar página</div>
-              </a>
-            </div>
-          </article>
+              <div class="project-image">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="img/aventis.png" alt="Vista previa de Aventis">
+                  <div class="overlay">Visitar página</div>
+                </a>
+              </div>
+            </article>
 
+          </div> <!-- /carousel-track -->
+
+          <button class="carousel-btn next" aria-label="Siguiente proyecto">&#10095;</button>
+        </div> <!-- /carousel -->
+
+        <div class="carousel-dots">
+          <button class="dot active" data-slide="0" aria-label="Proyecto 1"></button>
+          <button class="dot" data-slide="1" aria-label="Proyecto 2"></button>
+          <button class="dot" data-slide="2" aria-label="Proyecto 3"></button>
+          <button class="dot" data-slide="3" aria-label="Proyecto 4"></button>
+        </div>
+
+      </div>
+    </section>
+
+
+        <!-- EXPERIENCIA PROFESIONAL -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <h3>Experiencia profesional en desarrollo web</h3>
+        <p class="section-subtitle">
+          Landing pages, ecommerce y sitios en WordPress para empresas y startups.
+        </p>
+
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Proyecto anterior">&#10094;</button>
+
+          <div class="carousel-track">
+            <!-- ITEM 1: KARE -->
+            <article class="card project-row carousel-item">
+              <div class="project-image">
+                <a href="https://karesaludrenal.com/#" target="_blank" rel="noopener noreferrer">
+                  <!-- usa el nombre real de la imagen -->
+                  <img src="img/kare.png" alt="Sitio web Kare Salud Renal">
+                  <div class="overlay">Ver sitio</div>
+                </a>
+              </div>
+              <div class="project-info">
+                <h4>Kare Salud Renal – Sitio web y ecosistema de contenidos</h4>
+                <p class="project-role">Rol: Desarrollador web WordPress</p>
+                <p>
+                  Sitio orientado a pacientes con enfermedad renal, con enfoque en educación empática,
+                  captación de leads y difusión de contenido educativo.
+                </p>
+                <ul class="project-list">
+                  <li>Maquetación de la landing principal, secciones “Sobre mí”, servicios y recursos gratuitos.</li>
+                  <li>Personalización de estilos, tipografías y paleta de colores acorde a la marca.</li>
+                  <li>Integración con redes sociales y optimización básica de rendimiento y SEO on-page.</li>
+                </ul>
+                <p class="project-tech">
+                  <strong>Tecnologías:</strong> WordPress, maquetador visual (Elementor/Gutenberg), HTML/CSS, plugins SEO.
+                </p>
+              </div>
+            </article>
+            <!-- ITEM 2: TI CORPORACIÓN – Soluciones de climatización -->
+            <article class="card project-row carousel-item">
+              <div class="project-image">
+                <a href="https://ticorperu.net/" target="_blank" rel="noopener noreferrer">
+                  <img src="img/ticorp.png" alt="Sitio web TI Corporación">
+                  <div class="overlay">Ver sitio</div>
+                </a>
+              </div>
+
+              <div class="project-info">
+                <h4>TI Corporación – Empresa de climatización y servicios HVAC</h4>
+                <p class="project-role">Rol: Desarrollador Web WordPress · Página corporativa</p>
+                <p>
+                  Sitio empresarial para una compañía con más de 15 años en sistemas de aire acondicionado,
+                  ventilación y refrigeración.
+                </p>
+                <ul class="project-list">
+                  <li>Maquetación de secciones “Nosotros”, Misión, Visión, Servicios y Certificaciones.</li>
+                  <li>Implementación de carrusel de clientes, secciones informativas y botones de contacto rápido.</li>
+                  <li>Optimización de navegación, redacción, estructura visual y experiencia de usuario.</li>
+                </ul>
+                <p class="project-tech">
+                  <strong>Tecnologías:</strong> WordPress, Elementor, CSS personalizado, optimización SEO básica.
+                </p>
+              </div>
+            </article>
+            <!-- Duplica más <article class="card project-row carousel-item"> para otros sitios -->
+          </div>
+
+          <button class="carousel-btn next" aria-label="Siguiente proyecto">&#10095;</button>
+        </div>
+
+        <div class="carousel-dots">
+          <button class="dot active" data-slide="0" aria-label="Proyecto 1"></button>
+          <button class="dot" data-slide="1" aria-label="Proyecto 2"></button>
+          <!-- agrega más dots según items -->
         </div>
       </div>
     </section>
@@ -327,6 +463,48 @@
   <script>
     // Año automático en el footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Soporte para múltiples carruseles (.carousel)
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach((carousel) => {
+      const track = carousel.querySelector('.carousel-track');
+      const items = carousel.querySelectorAll('.carousel-item');
+      const prevBtn = carousel.querySelector('.carousel-btn.prev');
+      const nextBtn = carousel.querySelector('.carousel-btn.next');
+      const dotsContainer = carousel.nextElementSibling; // asumimos que .carousel-dots viene después
+      const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
+
+      if (!track || items.length === 0) return;
+
+      let currentIndex = 0;
+
+      function updateCarousel(index) {
+        currentIndex = index;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          const newIndex = (currentIndex - 1 + items.length) % items.length;
+          updateCarousel(newIndex);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          const newIndex = (currentIndex + 1) % items.length;
+          updateCarousel(newIndex);
+        });
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => updateCarousel(i));
+      });
+    });
   </script>
 </body>
 </html>
