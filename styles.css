@@ -229,6 +229,9 @@ nav a:hover {
   color: #e5e7eb;
 }
 
+section {
+  scroll-margin-top: 50px; /* puedes ajustar el número (80–110px suele ir bien) */
+}
 /* GRID */
 
 .grid-2 {
